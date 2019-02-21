@@ -1,0 +1,9 @@
+package com.myspace.mortgage_app;
+
+import java.lang.Number;
+
+rule "MortgageMachineReasoning"
+	dialect "mvel"
+	when
+	then
+end
