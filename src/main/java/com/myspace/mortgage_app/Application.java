@@ -8,18 +8,21 @@ public class Application implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Applicant")
+	@org.kie.api.definition.type.Label("Applicant")
 	private com.myspace.mortgage_app.Applicant applicant;
-	@org.kie.api.definition.type.Label(value = "Property")
+	@org.kie.api.definition.type.Label("Property")
 	private com.myspace.mortgage_app.Property property;
-	@org.kie.api.definition.type.Label(value = "Error details")
+	@org.kie.api.definition.type.Label("Error details")
 	private com.myspace.mortgage_app.ValidationErrorDO errors;
-	@org.kie.api.definition.type.Label(value = "Down Payment")
+	@org.kie.api.definition.type.Label("Down Payment")
 	private java.lang.Integer downpayment;
-	@org.kie.api.definition.type.Label(value = "Years of amortization")
+	@org.kie.api.definition.type.Label("Years of amortization")
 	private java.lang.Integer amortization;
-	@org.kie.api.definition.type.Label(value = "Mortgage amount")
+	@org.kie.api.definition.type.Label("Mortgage amount")
 	private java.lang.Integer mortgageamount;
+
+	@org.kie.api.definition.type.Label(value = "inlimit Machine Reasoning")
+	private java.lang.Boolean imlimitMR;
 
 	public Application() {
 	}
@@ -72,17 +75,26 @@ public class Application implements java.io.Serializable {
 		this.mortgageamount = mortgageamount;
 	}
 
+	public java.lang.Boolean getImlimitMR() {
+		return this.imlimitMR;
+	}
+
+	public void setImlimitMR(java.lang.Boolean imlimitMR) {
+		this.imlimitMR = imlimitMR;
+	}
+
 	public Application(com.myspace.mortgage_app.Applicant applicant,
 			com.myspace.mortgage_app.Property property,
 			com.myspace.mortgage_app.ValidationErrorDO errors,
 			java.lang.Integer downpayment, java.lang.Integer amortization,
-			java.lang.Integer mortgageamount) {
+			java.lang.Integer mortgageamount, java.lang.Boolean imlimitMR) {
 		this.applicant = applicant;
 		this.property = property;
 		this.errors = errors;
 		this.downpayment = downpayment;
 		this.amortization = amortization;
 		this.mortgageamount = mortgageamount;
+		this.imlimitMR = imlimitMR;
 	}
 
 }
