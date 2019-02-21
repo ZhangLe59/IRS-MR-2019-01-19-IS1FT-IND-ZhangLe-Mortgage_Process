@@ -4,6 +4,9 @@ import java.lang.Number;
 
 rule "MortgageMachineReasoning"
 	dialect "mvel"
+	ruleflow-group "mortgagemachinereasoning"
 	when
+		app : Application( mortgageamount >= ( app.property.saleprice - app.downpayment ) )
 	then
+		app.setImlimitMR( true );
 end
