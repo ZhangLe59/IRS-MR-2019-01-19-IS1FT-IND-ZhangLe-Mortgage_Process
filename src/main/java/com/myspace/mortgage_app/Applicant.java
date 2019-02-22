@@ -20,6 +20,15 @@ public class Applicant implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Credit Rating")
 	private java.lang.Integer creditrating;
 
+	@org.kie.api.definition.type.Label(value = "Age")
+	private java.lang.Integer age;
+
+	@org.kie.api.definition.type.Label(value = "Has Job")
+	private java.lang.Boolean hasJob;
+
+	@org.kie.api.definition.type.Label(value = "Own House")
+	private java.lang.Boolean ownHouse;
+
 	public Applicant() {
 	}
 
@@ -63,14 +72,42 @@ public class Applicant implements java.io.Serializable {
 		this.creditrating = creditrating;
 	}
 
+	public java.lang.Integer getAge() {
+		return this.age;
+	}
+
+	public void setAge(java.lang.Integer age) {
+		this.age = age;
+	}
+
+	public java.lang.Boolean getHasJob() {
+		return this.hasJob;
+	}
+
+	public void setHasJob(java.lang.Boolean hasJob) {
+		this.hasJob = hasJob;
+	}
+
+	public java.lang.Boolean getOwnHouse() {
+		return this.ownHouse;
+	}
+
+	public void setOwnHouse(java.lang.Boolean ownHouse) {
+		this.ownHouse = ownHouse;
+	}
+
 	public Applicant(java.lang.String name, java.lang.Integer annualincome,
 			java.lang.String address, java.lang.Integer ssn,
-			java.lang.Integer creditrating) {
+			java.lang.Integer creditrating, java.lang.Integer age,
+			java.lang.Boolean hasJob, java.lang.Boolean ownHouse) {
 		this.name = name;
 		this.annualincome = annualincome;
 		this.address = address;
 		this.ssn = ssn;
 		this.creditrating = creditrating;
+		this.age = age;
+		this.hasJob = hasJob;
+		this.ownHouse = ownHouse;
 	}
 
 }
